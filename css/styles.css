@@ -1,0 +1,20 @@
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #e5e5e5;
+    --primary-white-color: #ffffff;
+    --primary-links-color: #2196F3;
+  }
+  header {
+      background-color: var(--primary-white-color) 
+  }
+  .logo-primary{
+      color: var(--primary-links-color);
+  }
+  .logo-secondary{
+      color: var(--title-text-color);
+  }
+  .link{
+      color: var(--title-text-color);
+      
+  }
