@@ -4,6 +4,9 @@
     --accent-color: #e5e5e5;
     --primary-white-color: #ffffff;
     --primary-links-color: #2196F3;
+    --primary-background-color: #2F303A;
+    --secondary-background-color: #F5F4FA;
+
   }
   header {
       background-color: var(--primary-white-color) 
@@ -16,5 +19,105 @@
   }
   .link{
       color: var(--title-text-color);
-      
+  }
+  .link:hover,
+  .link:focus {
+      color: var(--primary-links-color);
+  }
+  .header-address{
+      color: var(--primary-text-color);
+  }
+  .header-address:hover,
+  .header-address:focus{
+      color: var(--primary-links-color);
+  }
+  .hero{
+      background-color: var(--primary-background-color);
+  }
+  .hero-title{
+      color: var(--primary-white-color);
+  }
+  .hero-link{
+      color: var(--primary-white-color);
+      background-color: var(--primary-links-color);
+  }
+  .hero-link:hover,
+  .hero-link:focus{
+      color: var(--primary-links-color);
+      background-color: var(--primary-white-color);
+  }
+  .advan{
+      background-color: var(--primary-white-color);
+
+  }
+  .advan-subtitle{
+      color: var(--title-text-color);
+  }
+  .advan-text{
+      color: var(--primary-text-color);
+  }
+  .work{
+      background-color: var(--primary-white-color);
+  }
+  .work-title{
+      color: var(--title-text-color);
+  }
+  .team{
+      background-color: var(--secondary-background-color);
+  }
+  .team-title{
+      color: var(--title-text-color);
+  }
+  .team-subtitle{
+      color: var(--title-text-color);
+  }
+  .team-text{
+      color: var(--primary-text-color);
+  }
+  .footer{
+      background-color: var(--primary-background-color);
+  }
+  .logo-primary-footer{
+      color: var(--primary-links-color);
+  }
+  .logo-secondary-footer{
+      color: var(--primary-white-color);
+  }
+  .footer-address{
+      color: var(--primary-white-color);
+  }
+  .footer-address:hover,
+  .footer-address:focus{
+      color: var(--primary-links-color);
+  }
+
+  .footer-info{
+      color: rgba(255, 255, 255, 0.6);
+  }
+  .footer-info:hover,
+  .footer-info:focus{
+      color: var(--primary-links-color);
+  }
+  /* css для недостающих класов portfolio.html */
+  
+  .filters{
+      background-color: var(--primary-white-color);
+  }
+  .filters-link{
+      background-color: var(--secondary-background-color);
+      color: var(--title-text-color);
+  }
+  .filters-link:hover,
+  .filters-link:focus{
+      background-color: var(--primary-links-color);
+      color: var(--primary-white-color);
+  }
+  .projects{
+      background-color: var(--primary-white-color);
+  }
+  .projects-subtitle{
+      color: var(--title-text-color);
+  }
+  .projects-text{
+      color: var(--primary-text-color);
   }
