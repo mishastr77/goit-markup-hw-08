@@ -15,11 +15,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
+
 h1,
 h2,
 h3,
@@ -61,12 +57,15 @@ img {
   overflow: hidden;
 }
 .conteiner {
-  display: flex;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 .nav {
   display: flex;
@@ -78,12 +77,15 @@ img {
   margin-bottom: 0;
   padding: 0;
 }
-.site-nav .link {
-  display: block;
+.site-nav .item {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1429;
+  letter-spacing: 0.02em;
 }
-
 .site-nav .item + .item {
   margin-left: 50px;
 }
@@ -126,10 +128,6 @@ header {
 }
 .link,
 .main-link {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
 }
 .header-info {
   display: flex;
@@ -142,14 +140,14 @@ header {
   margin-left: 50px;
 }
 .header-info .header-address {
-  display: block;
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--primary-text-color);
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.143;
+  line-height: 1.1429;
   letter-spacing: 0.02em;
 }
 .header-address:hover,
@@ -235,9 +233,11 @@ header {
 }
 .work {
   background-color: var(--primary-white-color);
+  padding-bottom: 94px;
 }
+
 .work-title {
-  margin-bottom: 0;
+  margin-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
   width: 376px;
@@ -251,8 +251,6 @@ header {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
-  padding-bottom: 94px;
   padding-left: 0;
   margin: 0;
 }
@@ -284,7 +282,7 @@ header {
   margin-top: 50px;
   margin-bottom: 0;
   padding: 0;
-}
+  }
 .team-list .item + .item {
   margin-left: 30px;
 }
@@ -294,6 +292,7 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 .team-subtitle {
   margin-top: 30px;
@@ -305,11 +304,12 @@ header {
   text-align: center;
 }
 .team-text {
-  margin: 10px auto 30px auto;
+  margin-top: 10px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 0;
 }
 .footer {
   padding-top: 60px;
@@ -357,9 +357,11 @@ header {
   padding: 0;
   margin: 0;
 }
+.footer-list .item + .item{
+  margin-top: 9px;
+}
 .footer-info {
   display: inline-block;
-  margin-top: 9px;
   padding: 0;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
@@ -385,7 +387,7 @@ header {
   justify-content: center;
 }
 .button-list .item + .item {
-  margin-left: 30px;
+  margin-left: 8px;
 }
 .button-list .item {
   margin: 0;
@@ -395,15 +397,21 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
-  margin: 50px auto 0px auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 0px;
+  margin-inline-end: 0px;
+  align-items: center;
 }
 
 .filter-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  padding-bottom: 20px;
   border: 1px solid #eeeeee;
 }
 .filter-item:nth-child(3n) {
@@ -421,14 +429,17 @@ header {
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  border-color: var(--primary-white-color);
+  box-shadow: none;
 }
 .filters:hover,
 .filters:focus {
   background-color: var(--primary-links-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .filter-list {
   display: flex;
@@ -447,11 +458,11 @@ header {
   text-decoration: none;
 }
 .projects-text {
-  margin-bottom: 20px;
   margin-left: 24px;
   color: var(--primary-text-color);
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.875;
   text-decoration: none;
+  margin-bottom: 0;
 }
