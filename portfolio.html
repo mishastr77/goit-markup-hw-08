@@ -32,14 +32,19 @@
           </ul>
         </nav>
         <ul class="header-info">
-          <li class="item">
+          <li class="header-info-item">
             <a href="mailto:info@devstudio.com" class="header-address"
-              >info@devstudio.com</a
+              ><svg class="header-svg" width="16" height="12">
+                <use href="../images/sprite.svg#envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
-          <li class="item">
+          <li class="header-info-item">
             <a href="tel:+380961111111" class="header-address"
-              >+38 096 111 11 11</a
+              ><svg class="header-svg" width="10" height="16">
+                <use href="../images/sprite.svg#smartphone"></use></svg>
+                +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -48,33 +53,33 @@
     <main>
       <section class="portfolio">
         <div class="conteiner">
-        <h1 class="visually-hidden">Наше портфолио</h1>
-        <!-- Фильтры - filters-->
-        <ul class="button-list">
-          <li class="item">
-            <button style="button" class="filters">Все</button>
-          </li>
-          <li class="item">
-            <button style="button" class="filters">Веб-сайты</button>
-          </li>
-          <li class="item">
-            <button style="button" class="filters">Приложения</button>
-          </li>
-          <li class="item">
-            <button style="button" class="filters">Дизайн</button>
-          </li>
-          <li class="item">
-            <button style="button" class="filters">Маркетинг</button>
-          </li>
-        </ul>
-        <!-- Наши проекты - projects-->
+          <h1 class="visually-hidden">Наше портфолио</h1>
+          <!-- Фильтры - filters-->
+          <ul class="button-list">
+            <li class="item">
+              <button style="button" class="filters">Все</button>
+            </li>
+            <li class="item">
+              <button style="button" class="filters">Веб-сайты</button>
+            </li>
+            <li class="item">
+              <button style="button" class="filters">Приложения</button>
+            </li>
+            <li class="item">
+              <button style="button" class="filters">Дизайн</button>
+            </li>
+            <li class="item">
+              <button style="button" class="filters">Маркетинг</button>
+            </li>
+          </ul>
+          <!-- Наши проекты - projects-->
           <ul class="filter-list">
             <li class="filter-item">
               <a href="" class="link"
                 ><img
                   src="./images/portfolio1.jpg"
                   alt="ноут с открытым приложением"
-                  />
+                />
                 <h2 class="projects-subtitle">Технокряк</h2>
                 <p class="projects-text">Веб-сайт</p>
               </a>
@@ -84,7 +89,7 @@
                 ><img
                   src="./images/portfolio2.jpg"
                   alt="два баскетболиста в прыжке"
-                  />
+                />
                 <h2 class="projects-subtitle">
                   Постер New Orlean vs Golden Star
                 </h2>
@@ -96,27 +101,21 @@
                 ><img
                   src="./images/portfolio3.jpg"
                   alt="емблема ресторана Seafood"
-                 />
+                />
                 <h2 class="projects-subtitle">Ресторан Seafood</h2>
                 <p class="projects-text">Приложение</p>
               </a>
             </li>
             <li class="filter-item">
               <a href="" class="link"
-                ><img
-                  src="./images/portfolio4.jpg"
-                  alt="наушники"
-                 />
+                ><img src="./images/portfolio4.jpg" alt="наушники" />
                 <h2 class="projects-subtitle">Проект Prime</h2>
                 <p class="projects-text">Маркетинг</p>
               </a>
             </li>
             <li class="filter-item">
               <a href="" class="link"
-                ><img
-                  src="./images/portfolio5.jpg"
-                  alt="две коробки"
-                  />
+                ><img src="./images/portfolio5.jpg" alt="две коробки" />
                 <h2 class="projects-subtitle">Проект Boxes</h2>
                 <p class="projects-text">Приложение</p>
               </a>
@@ -126,17 +125,14 @@
                 ><img
                   src="./images/portfolio6.jpg"
                   alt="веб-сайт с изображением карты мира"
-                  />
+                />
                 <h2 class="projects-subtitle">Inspiration has no Borders</h2>
                 <p class="projects-text">Веб-сайт</p>
               </a>
             </li>
             <li class="filter-item">
               <a href="" class="link"
-                ><img
-                  src="./images/portfolio7.jpg"
-                  alt="развернутая книга"
-                 />
+                ><img src="./images/portfolio7.jpg" alt="развернутая книга" />
                 <h2 class="projects-subtitle">Издание Limited Edition</h2>
                 <p class="projects-text">Дизайн</p>
               </a>
@@ -146,7 +142,7 @@
                 ><img
                   src="./images/portfolio8.jpg"
                   alt="бирка с надписью Lab el tag"
-                 />
+                />
                 <h2 class="projects-subtitle">Проект LAB</h2>
                 <p class="projects-text">Маркетинг</p>
               </a>
@@ -156,43 +152,93 @@
                 ><img
                   src="./images/portfolio9.jpg"
                   alt="человек работающий за ноутбуком"
-                 />
+                />
                 <h2 class="projects-subtitle">Growing Business</h2>
                 <p class="projects-text">Приложение</p>
               </a>
             </li>
           </ul>
         </div>
-        </section>
+      </section>
     </main>
     <footer class="footer">
       <div class="conteiner conteiner-footer">
-        <a href="./index.html" class="logo-primary-footer"
-          >Web<span class="logo-secondary-footer">Studio</span></a
-        >
-        <address>
-          <ul class="footer-list">
-            <li class="item">
+        <div class="footer-data">
+          <a href="./index.html" class="logo-primary-footer"
+            >Web<span class="logo-secondary-footer">Studio</span></a
+          >
+          <address class="footer-address-main">
+            <ul class="footer-list">
+              <li class="item">
+                <a
+                  href="https://goo.gl/maps/RXui1ZxkWLAahyHr6"
+                  target="_blank"
+                  rel="noopener noreferer"
+                  class="footer-address"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="item">
+                <a href="mailto:info@example.com" class="footer-info"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380991111111" class="footer-info"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
+          <p class="footer-social-text">Присоединяйтесь</p>
+          <ul class="social-footer">
+            <li class="social-icon-item-footer">
               <a
-                href="https://goo.gl/maps/RXui1ZxkWLAahyHr6"
+                class="footer-icon"
+                href="http://instagram.com"
                 target="_blank"
-                rel="noopener noreferer"
-                class="footer-address"
-                >г. Киев, пр-т Леси Украинки, 26</a
-              >
+                rel="noopener noreferrer"
+                aria-label="instagram"
+                ><svg class="social-icon" width="20" height="20">
+                  <use href="../images/sprite.svg#instagram"></use></svg>
+                </a>
             </li>
-            <li class="item">
-              <a href="mailto:info@example.com" class="footer-info"
-                >info@example.com</a
-              >
+            <li class="social-icon-item-footer">
+              <a
+                class="footer-icon"
+                href="http://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="twitter"
+                ><svg class="social-icon" width="20" height="20">
+                  <use href="../images/sprite.svg#twitter"></use></svg>
+                </a>
             </li>
-            <li class="item">
-              <a href="tel:+380991111111" class="footer-info"
-                >+38 099 111 11 11</a
-              >
+            <li class="social-icon-item-footer">
+              <a
+                class="footer-icon"
+                href="http://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="facebook"
+                ><svg class="social-icon" width="20" height="20">
+                  <use href="../images/sprite.svg#facebook"></use></svg></a>
+            </li>
+            <li class="social-icon-item-footer">
+              <a
+                class="footer-icon"
+                href="http://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin"
+                ><svg class="social-icon" width="20" height="20">
+                  <use href="../images/sprite.svg#linkedin"></use></svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
