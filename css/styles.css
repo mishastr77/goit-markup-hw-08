@@ -385,6 +385,7 @@ header {
 }
 .team-text {
   margin-top: 10px;
+  margin-bottom: 16px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
