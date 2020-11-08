@@ -390,8 +390,7 @@ header {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-bottom: 0;
-}
+  }
 .social {
   display: inline-flex;
   padding-left: 32px;
