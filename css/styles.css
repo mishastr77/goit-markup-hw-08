@@ -44,7 +44,8 @@ img {
 .footer-address,
 .footer-info,
 .main-link,
-.hero-link {
+.hero-link,
+.filter-link {
   text-decoration: none;
 }
 .visually-hidden {
