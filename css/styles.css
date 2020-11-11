@@ -210,6 +210,43 @@ header {
   color: var(--primary-links-color);
   background-color: var(--primary-white-color);
 }
+.backdrop {
+position: fixed;
+margin-left: 215px;
+width: 1600px;
+height: 1024px;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+
+background: rgba(0, 0, 0, 0.2);top: 0;
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  height: 581px;
+width: 528px;
+border-radius: 4px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.button-close{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
 .advan {
   padding-top: 94px;
   padding-bottom: 94px;
