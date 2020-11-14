@@ -126,7 +126,7 @@ header {
   position: relative;
   color: var(--primary-links-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
 .main-link::after {
   content: "";
   position: absolute;
@@ -135,7 +135,7 @@ header {
   width: 100%;
   height: 4px;
   background-color: var(--primary-links-color);
-  }
+}
 .main-link:hover,
 .main-link:focus {
   color: var(--primary-links-color);
@@ -396,20 +396,20 @@ header {
   padding-bottom: 27px;
   width: 100%;
   height: 70px;
-  background: #2F303A80;
-  }
+  background: #2f303a80;
+}
 .work-subtitle {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
   font-family: Roboto;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 1.1429;
-letter-spacing: 0.03em;
-text-align: center;
-text-transform: uppercase;
-color: var(--primary-white-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1429;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
 }
 .team {
   padding-top: 94px;
@@ -787,32 +787,31 @@ color: var(--primary-white-color);
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  }
+}
 .overlay-projects {
-position: absolute;
-padding: 63px 24px;
-margin: 0;
-bottom: 0;
-width: 100%;
-height: 100%;
-transform: translateY(100%);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  padding: 63px 24px;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
-font-family: Roboto;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.5556;
-letter-spacing: 0.03em;
-text-align: left;
-color: var(--primary-white-color);
-background-color: #2196F390;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5556;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--primary-white-color);
+  background-color: #2196f390;
 }
 .filter-link:hover .overlay-projects,
 .filter-link:focus .overlay-ptojects {
   transform: translateY(0);
-  }
+}
 .projects {
   background-color: var(--primary-white-color);
 }
@@ -824,7 +823,7 @@ background-color: #2196F390;
   line-height: 2;
   letter-spacing: 0.06em;
   text-decoration: none;
- }
+}
 .projects-text {
   margin-left: 24px;
   color: var(--primary-text-color);
@@ -834,4 +833,4 @@ background-color: #2196F390;
   text-decoration: none;
   margin-bottom: 0;
   padding-bottom: 20px;
- }
+}
