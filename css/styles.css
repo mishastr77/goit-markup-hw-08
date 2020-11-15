@@ -235,7 +235,7 @@ header {
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
   opacity: 1;
-  transition: all 2s steps(4, jump-end) 1s;
+  transition: all 500ms steps(4, jump-end) 1s;
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -263,6 +263,7 @@ header {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  border-radius: 50%;
 }
 .advan {
   padding-top: 94px;
@@ -527,7 +528,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-white-color);
-}
+  }
 .clients-svg {
   display: flex;
   justify-content: center;
@@ -809,7 +810,7 @@ header {
   background-color: #2196f390;
 }
 .filter-link:hover .overlay-projects,
-.filter-link:focus .overlay-ptojects {
+.filter-link:focus .overlay-projects {
   transform: translateY(0);
 }
 .projects {
