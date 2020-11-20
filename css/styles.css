@@ -265,6 +265,172 @@ header {
   box-sizing: border-box;
   border-radius: 50%;
 }
+.section-form {
+  padding: 40px;
+}
+.form-title {
+  margin-bottom: 30px;
+
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.form {
+  width: 100%;
+}
+.form-fild {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 28px;
+  width: 100%;
+  height: 40px;
+}
+.form-lable {
+  width: 100%;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  margin: 0;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-textarea::placeholder {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #75757550;
+}
+.label-title {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+.label-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+  border-color: var(--primary-links-color);
+  outline: none;
+}
+.form-textarea:focus {
+  border-color: var(--primary-links-color);
+  outline: none;
+}
+.form-input:focus ~ .label-icon {
+  fill: var(--primary-links-color);
+}
+.contract {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7143;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+.contract-link {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7143;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--primary-links-color);
+  text-decoration: underline;
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  margin-left: 12px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .checkbox-icon {
+  transform: scale(1);
+  border-color: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.form-button {
+  width: 200px;
+  height: 50px;
+  margin-left: 124px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--primary-white-color);
+  background: var(--primary-links-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-button:hover,
+.form-button:focus {
+  background-color: #188ce8;
+  outline: none;
+}
 .advan {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -528,7 +694,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-white-color);
-  }
+}
 .clients-svg {
   display: flex;
   justify-content: center;
@@ -688,6 +854,85 @@ header {
 .footer-icon:hover,
 .footer-icon:focus {
   background-color: var(--primary-links-color);
+}
+.footer-form-main {
+  display: block;
+  width: 570px;
+  margin: 12px 0px 34px 93px;
+  padding: 0;
+}
+.footer-form-text {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1429;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.footer-form-input {
+  padding: 15px 16px;
+  margin: 0;
+  width: 358px;
+  background: transparent;
+  color: var(--primary-white-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-form-input:focus {
+  border-color: var(--primary-links-color);
+  outline: none;
+}
+.footer-form-input::placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #ffffff60;
+}
+.btn-footer-form {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  margin-left: 7px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: left;
+  background: var(--primary-links-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-footer-form:hover,
+.btn-footer-form:focus {
+  background-color: var(--primary-white-color);
+  color: var(--primary-links-color);
+  outline: none;
+}
+.footer-form-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--primary-white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-footer-form:hover .footer-form-icon,
+.btn-footer-form:focus .footer-form-icon {
+  fill: var(--primary-links-color);
 }
 
 /* css для недостающих класов portfolio.html */
