@@ -180,6 +180,10 @@ header {
 }
 
 .hero {
+  display: flex;
+  width: 1600px;
+  height: 600px;
+  margin: 0;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -193,6 +197,7 @@ header {
 .hero-div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .hero-title {
   margin-bottom: 30px;
@@ -270,7 +275,6 @@ header {
 }
 .form-title {
   margin-bottom: 30px;
-
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;
@@ -289,8 +293,23 @@ header {
   width: 100%;
   height: 40px;
 }
+.form-fild-textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+}
+.form-fild-checkbox {
+  margin-top: 16px;
+  margin-bottom: 30px;
+  padding: 0;
+}
 .form-lable {
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .form-input {
   width: 100%;
@@ -378,7 +397,7 @@ header {
 .form-checkbox {
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  margin: 0;
   padding: 0;
 }
 .checkbox {
@@ -856,10 +875,18 @@ header {
   background-color: var(--primary-links-color);
 }
 .footer-form-main {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   width: 570px;
   margin: 12px 0px 34px 93px;
   padding: 0;
+}
+.footer-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
 }
 .footer-form-text {
   font-family: Roboto;
@@ -903,7 +930,6 @@ header {
   width: 200px;
   height: 50px;
   padding: 10px 28px;
-  margin-left: 7px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
