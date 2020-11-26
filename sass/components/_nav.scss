@@ -1,0 +1,25 @@
+.nav-main {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  &-site {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    .item {
+      display: flex;
+      padding-top: 31px;
+      padding-bottom: 31px;
+      font-weight: 500;
+      line-height: 1.1429;
+      letter-spacing: 0.02em;
+      & + .item {
+        margin-left: 50px;
+      }
+    }
+  }
+}

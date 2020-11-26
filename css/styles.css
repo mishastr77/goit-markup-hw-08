@@ -140,9 +140,7 @@ header {
 .main-link:focus {
   color: var(--primary-links-color);
 }
-.link,
-.main-link {
-}
+
 .header-info {
   display: flex;
   margin-left: auto;
@@ -183,7 +181,7 @@ header {
   display: flex;
   width: 1600px;
   height: 600px;
-  margin: 0;
+  margin-left: 100px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;

@@ -1,0 +1,17 @@
+.logo {
+  margin-right: 93px;
+
+  &-primary,
+  &-secondary {
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.193;
+  }
+}
+.logo-primary {
+  color: $primaryLinksColor;
+}
+.logo-secondary {
+  color: $titleTextColor;
+}

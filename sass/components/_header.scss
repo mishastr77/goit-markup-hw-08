@@ -1,0 +1,40 @@
+.header {
+    background-color: $primaryWhiteColor;
+  
+  &-info {
+    display: flex;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  &-address {
+    display: flex;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    color: $primaryTextColor;
+    font-weight: 500;
+    line-height: 1.1429;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover,
+  &:focus {
+    color: $primaryLinksColor;
+  }
+}
+  &-svg {
+    display: inline-block;
+    fill: $primaryTextColor;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+  .header-info .header-info-item + .header-info-item {
+    margin-left: 30px;
+  }
+  .header-address:hover .header-svg,
+  .header-address:focus .header-svg {
+    fill: $primaryLinksColor;
+  }
