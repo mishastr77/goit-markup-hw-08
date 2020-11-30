@@ -1,14 +1,14 @@
 .footer-logo-primary {
     margin-bottom: 20px;
     color: $primaryLinksColor;
-    font-family: 'Raleway';
+    font-family: $secondaryFontFamily;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.193;
   }
   .footer-logo-secondary {
     color: $primaryWhiteColor;
-    font-family: 'Raleway';
+    font-family: $secondaryFontFamily;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.193;

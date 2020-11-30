@@ -13,12 +13,7 @@ h3,
 p {
   margin-top: 0;
 }
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  letter-spacing: 0.03em;
-}
+
 li {
   list-style: none;
 }
@@ -39,6 +34,12 @@ img {
 .hero-link,
 .portfolio-filter-link {
   text-decoration: none;
+}
+body {
+  font-family: $mainFontFamily;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0.03em;
 }
 .visually-hidden {
   position: absolute !important;
