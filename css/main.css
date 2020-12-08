@@ -6,7 +6,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 2px solid red;
 }
 
 h1,
@@ -91,7 +90,6 @@ body.modal-open {
 .nav-main {
   position: relative;
   display: flex;
-  /* align-items: center; */
 }
 
 .nav {
@@ -109,10 +107,6 @@ body.modal-open {
   margin-top: 0;
   margin-bottom: 60px;
   text-align: center;
-  /* display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; */
 }
 
 @media (min-width: 768px) {
@@ -127,6 +121,13 @@ body.modal-open {
   }
 }
 
+@media (min-width: 1200px) {
+  .nav-site {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .nav-site .item {
   display: block;
   max-width: 450px;
@@ -138,15 +139,6 @@ body.modal-open {
   line-height: 1.1717;
   letter-spacing: 0.02em;
   text-align: left;
-  /* display: flex;
-      padding-top: 31px;
-      padding-bottom: 31px;
-      font-weight: 500;
-      line-height: 1.1429;
-      letter-spacing: 0.02em;
-      & + .item {
-        margin-left: 50px;
-      } */
 }
 
 .nav-site .item:last-child {
@@ -157,7 +149,7 @@ body.modal-open {
   .nav-site .item {
     display: flex;
     margin-bottom: 0;
-    font-weight: 500;
+    font-size: 14px;
     line-height: 1.1721;
     letter-spacing: 0.02em;
     text-align: left;
@@ -183,11 +175,6 @@ body.modal-open {
   display: block;
   margin: 0;
   padding: 0;
-  /* display: flex;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; */
 }
 
 @media (min-width: 768px) {
@@ -203,15 +190,24 @@ body.modal-open {
   }
 }
 
+@media (min-width: 1200px) {
+  .header-info {
+    flex-direction: row;
+    padding: 30px 0;
+    align-items: baseline;
+    font-size: 14px;
+    line-height: 1.1721;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+}
+
 .header-address {
   color: #757575;
   font-weight: 500;
   line-height: 1.1429;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* display: flex;
-    padding-top: 31px;
-    padding-bottom: 31px; */
 }
 
 .header-address:hover, .header-address:focus {
@@ -286,9 +282,33 @@ body.modal-open {
   margin-bottom: 16px;
 }
 
-/* .header-info .header-info-item + .header-info-item {
-  margin-left: 30px;
-} */
+@media (min-width: 768px) {
+  .header-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-info-item {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-info-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-info-item:last-child {
+    margin-right: 0;
+  }
+}
+
 .header-address:hover .header-svg,
 .header-address:focus .header-svg {
   fill: #2196f3;
@@ -298,12 +318,29 @@ body.modal-open {
   margin-right: 88px;
 }
 
+@media (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
+}
+
 .logo-primary, .logo-secondary {
   padding: 16px 0;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.193;
+}
+
+@media (min-width: 768px) {
+  .logo-primary, .logo-secondary {
+    padding: 26px 0;
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1741;
+    text-align: left;
+  }
 }
 
 .logo-primary {
@@ -339,13 +376,11 @@ body.modal-open {
   width: 100%;
   height: 4px;
   background-color: #2196f3;
-  /* bottom: -32px;
-    display: block; */
 }
 
 @media (min-width: 768px) {
   .link-main::after {
-    bottom: -28px;
+    bottom: -34px;
     display: block;
   }
 }
@@ -1057,7 +1092,7 @@ body.modal-open {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-left: 100px;
+    margin-left: -200px;
     background-color: #2f303a;
     background-image: linear-gradient(#2f303a40, #2f303a40), url(../images/herodesk.jpg);
     background-repeat: no-repeat;

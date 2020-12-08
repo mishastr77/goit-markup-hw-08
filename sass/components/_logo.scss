@@ -1,9 +1,9 @@
 .logo {
   margin-right: 88px;
 
-  @include for-size(desctop) {
-  margin-right: 93px;
-}
+  @include for-size(desktop) {
+    margin-right: 93px;
+  }
 
   &-primary,
   &-secondary {
@@ -12,6 +12,21 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 1.193;
+
+    @include for-size(tablet) {
+      padding: 26px 0;
+      font-family: Raleway;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.1741;
+      text-align: left;
+    }
+
+    @include for-size(desctop) {
+      padding: 24px 0 25px;
+      font-size: 26px;
+      line-height: 1.1738;
+    }
   }
 }
 .logo-primary {

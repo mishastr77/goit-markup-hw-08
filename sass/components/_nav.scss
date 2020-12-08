@@ -1,8 +1,8 @@
 .nav-main {
   position: relative;
   display: flex;
-  /* align-items: center; */
-}
+  }
+
 .nav {
   display: flex;
   width: 100%;
@@ -25,54 +25,38 @@
       width: 294px;
       margin: 0;
       padding-top: 32px;
-      
     }
-    
 
-    
-    
-    /* display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; */
+    @include for-size(desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
     .item {
       display: block;
       max-width: 450px;
       padding-right: auto;
       padding-left: auto;
-     margin-bottom: 40px;
-font-size: 18px;
-font-weight: 500;
-line-height: 1.1717;
-letter-spacing: 0.02em;
-text-align: left;
-
-&:last-child {
-  margin-bottom: 0;
-}
-
-
-@include for-size(tablet) {
-  display: flex;
-  margin-bottom: 0;
-
-  font-weight: 500;
-line-height: 1.1721;
-letter-spacing: 0.02em;
-text-align: left;
-
-}
-
-
-      /* display: flex;
-      padding-top: 31px;
-      padding-bottom: 31px;
+      margin-bottom: 40px;
+      font-size: 18px;
       font-weight: 500;
-      line-height: 1.1429;
+      line-height: 1.1717;
       letter-spacing: 0.02em;
-      & + .item {
-        margin-left: 50px;
-      } */
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include for-size(tablet) {
+        display: flex;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 1.1721;
+        letter-spacing: 0.02em;
+        text-align: left;
+      }
+     
       &.page {
         margin-bottom: 52px;
 

@@ -17,14 +17,17 @@ font-weight: 500;
 line-height: 1.1717;
 letter-spacing: 0.02em;
 text-align: left;
-
   }
 
-  /* display: flex;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; */
+  @include for-size(desktop) {
+    flex-direction: row;
+    padding: 30px 0;
+    align-items: baseline;
+    font-size: 14px;
+line-height: 1.1721;
+letter-spacing: 0.02em;
+text-align: left;
+  }
   }
 
   .header-address {
@@ -34,9 +37,6 @@ text-align: left;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* display: flex;
-    padding-top: 31px;
-    padding-bottom: 31px; */
 
     &:hover,
     &:focus {
@@ -104,12 +104,30 @@ text-align: left;
 .header-info-item {
   margin-bottom: 16px;
 
-  @include for-size(tablet) {}
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }   
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+    margin-right: 30px;
     
+
+  }
 }
-/* .header-info .header-info-item + .header-info-item {
-  margin-left: 30px;
-} */
+
+.header-info-item:last-child {
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 0;
+  }
+}
+
 .header-address:hover .header-svg,
 .header-address:focus .header-svg {
   fill: $primaryLinksColor;

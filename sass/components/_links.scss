@@ -1,7 +1,7 @@
 .link {
-    color: $titleTextColor;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
+  color: $titleTextColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: $primaryLinksColor;
@@ -11,39 +11,28 @@
     position: relative;
     color: $primaryLinksColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    @include for-size(tablet) {
 
+    @include for-size(tablet) {
     }
-  &::after {
-    content: "";
-    position: absolute;
-bottom: -14px;
-transform: translate(-50%, -50%);
-display: block;
-left: 50%;
-width: 100%;
-    height: 4px;
-    background-color: $primaryLinksColor;
-
-    @include for-size(tablet) {
-      bottom: -28px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      transform: translate(-50%, -50%);
       display: block;
-      
-      
-      
+      left: 50%;
+      width: 100%;
+      height: 4px;
+      background-color: $primaryLinksColor;
+
+      @include for-size(tablet) {
+        bottom: -34px;
+        display: block;
+      }
     }
-
-
-
-
-    /* bottom: -32px;
-    display: block; */
-    
+    &:hover,
+    &:focus {
+      color: $primaryLinksColor;
+    }
   }
-  &:hover,
-  &:focus {
-    color: $primaryLinksColor;
-  }
-}
 }
