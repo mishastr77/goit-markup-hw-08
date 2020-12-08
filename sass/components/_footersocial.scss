@@ -1,19 +1,35 @@
 .footer-social {
   display: flex;
   flex-direction: column;
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
-  margin-top: 12px;
-  margin-bottom: 40px;
+  max-width: 100%;
+  align-items: center;
+  margin-top: 60px;
 
+  @include for-size(tablet) {
+    width: 50%;
+    margin: 0;
+    padding-top: 12px;
+  }
+
+  @include for-size(dasktop) {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
+    height: 80px;
+    margin-left: 70px;
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+    
   &-text {
     color: $primaryWhiteColor;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.1721;
-    text-align: left;
     margin-bottom: 20px;
+    @include for-size(desktop) {
+    margin-right: auto;
+  }
   }
   &-icon {
     display: inline-flex;

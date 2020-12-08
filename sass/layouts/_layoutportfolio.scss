@@ -1,32 +1,56 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 45px;
+  padding-bottom: 60px;
   background-color: $primaryWhiteColor;
+
+  @include for-size(desktop) {
+    padding-top: 79px;
+    padding-bottom: 94px;
+  }
 
   &-button-list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
+    margin-left: -8px;
     padding: 0;
-    justify-content: center;
+
+    @include for-size(tablet) {
+      display: flex;
+      margin-left: 0;
+      justify-content: center;
+    }
+
     .portfolio-button-item + .portfolio-button-item {
-      margin-left: 8px;
+      margin-left: 8;
+
+      @include for-size(tablet) {
+        margin-left: 8px;
+      }
     }
     .portfolio-button-item {
-      margin: 0;
+      margin-left: 8px;
       padding: 0;
+
+      @include for-size(tablet) {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
-  .portfolio-filter-btn {
-    padding: 4px 20px;
+  &-filter-btn {
+    padding: 6px 22px;
+    margin-top: 15px;
     background-color: $secondaryBackgroundColor;
     color: $titleTextColor;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.63;
+    line-height: 1.625;
     box-shadow: none;
     border-color: transparent;
     border-radius: 4px;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover,
     &:focus {
       background-color: $primaryLinksColor;
@@ -40,33 +64,59 @@
   }
 
   &-filter-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
-    margin-top: 50px;
+    display: block;
+    width: 100%;
+    margin-top: 40px;
     margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 30px;
-    padding-left: 0px;
-    margin-inline-end: 0px;
-    align-items: center;
+    padding: 0;
+
+    @include for-size(tablet) {
+      display: flex;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 0;
+      margin-right: 0;
+      margin-left: -15px;
+      padding-right: 30px;
+      padding-left: 0px;
+      margin-inline-end: 0px;
+      align-items: center;
+    }
   }
 
   &-filter-item {
-    width: calc((100% - 60px) / 3);
-    margin-right: 30px;
+    width: 100%;
     margin-bottom: 30px;
-    padding-bottom: 0;
+    padding: 0;
     border: 1px solid #eeeeee;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:nth-child(3n) {
-      margin-right: 0;
+
+    @include for-size(tablet) {
+      width: calc(100% / 2 - 30px);
+      margin: 15px;
+      padding: 0;
     }
+
+    @include for-size(desktop) {
+      width: calc(100% / 3 - 30px);
+      padding-bottom: 0;
+      margin: 15px;
+    }
+
     &:nth-last-child(-n + 3) {
+      @include for-size(desktop) {
       margin-bottom: 0;
+    }
     }
     & .portfolio-filter-link:hover,
     & .portfolio-filter-link:focus {

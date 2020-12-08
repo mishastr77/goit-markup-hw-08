@@ -5,6 +5,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 2px solid red;
 }
 
 h1,
@@ -41,6 +42,11 @@ body {
   font-style: normal;
   letter-spacing: 0.03em;
 }
+
+body.modal-open {
+overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -52,9 +58,21 @@ body {
   overflow: hidden;
 }
 .conteiner {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+  
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
 }

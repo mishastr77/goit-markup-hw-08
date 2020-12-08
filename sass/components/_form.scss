@@ -1,14 +1,20 @@
 .form {
+  max-width: 450px;
   width: 100%;
   &-section {
     padding: 40px;
   }
   &-title {
+    max-width: 450px;
     margin-bottom: 30px;
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
+
+    @include for-size(desktop) {
+      line-height: 1.172;
+    }
   }
   &-fild {
     position: relative;
@@ -26,8 +32,12 @@
     }
     &-checkbox {
       margin-top: 16px;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
       padding: 0;
+
+      @include for-size(desktop) {
+      margin-bottom: 30px;
+    }
     }
   }
   &-lable {
@@ -79,7 +89,7 @@
   &-button {
     width: 200px;
     height: 50px;
-    margin-left: 124px;
+    margin-left: 85px;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.875;
@@ -91,6 +101,10 @@
     border-radius: 4px;
     border-color: transparent;
     transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+@include for-size(desktop) {
+    margin-left: 124px;
+  }
     &:hover,
     &:focus {
       background-color: #188ce8;
@@ -124,16 +138,29 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contract {
-  font-weight: 400;
-  line-height: 1.7143;
+  font-size: 12px;
+  line-height: 1.1667;
   text-align: left;
   color: $primaryTextColor;
-  &-link {
-    font-weight: 400;
+
+  @include for-size(desktop) {
+    font-size: 14px;
     line-height: 1.7143;
+    text-align: left;
+  }
+
+  &-link {
+    font-size: 12px;
+    line-height: 1.1667;
     text-align: left;
     color: $primaryLinksColor;
     text-decoration: underline;
+
+    @include for-size(desktop) {
+      font-size: 14px;
+      line-height: 1.7143;
+      text-align: left;
+    }
   }
 }
 
@@ -150,11 +177,14 @@
     display: inline-block;
     width: 16px;
     height: 15px;
-    margin-right: 5px;
-    margin-left: 12px;
+    margin-right: 5px;   
     border: 2px solid $titleTextColor;
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+  @include for-size(desktop) {
+    margin-left: 12px;
+  }
   }
   &:checked + .checkbox-icon {
     transform: scale(1);

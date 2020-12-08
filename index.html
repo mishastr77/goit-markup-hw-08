@@ -15,45 +15,54 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+   <header class="page-header">
       <div class="conteiner nav-main">
         <nav class="nav">
           <a href="./index.html" class="logo logo-primary"
             >Web<span class="logo-secondary">Studio</span></a
           >
-          <ul class="nav-site">
-            <li class="item">
-              <a href="./index.html" class="link link-main">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="header-info">
-          <li class="header-info-item">
-            <a href="mailto:info@devstudio.com" class="header-address"
-              ><svg class="header-svg" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-info-item">
-            <a href="tel:+380961111111" class="header-address"
-              ><svg class="header-svg" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use></svg>
-                +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <button type="button" class="menu-button is-open" aria-expanded="false"
+          aria-controls="header-menu" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./images/sprite.svg#cross"></use>
+              <use class="icon-cross" href="./images/sprite.svg#treline"></use>
+            </svg>
+          </button>
+          <div class="menu-conteiner" id="menu-conteiner" data-menu>
+            <ul class="nav-site">
+              <li class="item page">
+                <a href="./index.html" class="link link-main">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+            <ul class="header-info">
+              <li class="header-info-item">
+                <a href="mailto:info@devstudio.com" class="header-address"
+                  ><svg class="header-svg" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header-info-item">
+                <a href="tel:+380961111111" class="header-address"
+                  ><svg class="header-svg" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use></svg>
+                    +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>          
+        </nav>       
       </div>
     </header>
     <main>
-       <!-- Герой -->
+        <!-- Герой --> 
       <section class="hero">
-        <div class="conteiner hero-div">
+        <div class="conteiner">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
@@ -62,7 +71,7 @@
         </div>
       </section>
       <!-- Преймущества advantages -->
-      <section class="advan">
+     <section class="advan">
         <h2 class="visually-hidden">Наши преймущества</h2>
         <div class="conteiner">
           <ul class="advantages">
@@ -97,31 +106,34 @@
           </ul>
         </div>
       </section>
-      <!--Наша работа-->
+      <!-- Наша работа -->
       <section class="work">
         <div class="conteiner">
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="work-general">
             <li class="work-list">
-              <img
-                src="./images/imag1.jpg"
-                alt="прописывается код на компютере"
-              />
+              <picture>
+                <source srcset="./images/imag1.jpg 1x, ./images/imag1@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/imag1.jpg" alt="прописывается код на компютере" />
+              </picture>
               <div class="work-item">
                 <h3 class="work-subtitle">Десктопные приложения</h3>
               </div>
             </li>
             <li class="work-list">
-              <img
-                src="./images/imag2.jpg"
-                alt="установка приложений на телефон"
-              />
+              <picture>
+                <source srcset="./images/imag2.jpg 1x, ./images/imag2@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/imag2.jpg" alt="установка приложений на телефон" />
+              </picture>
               <div class="work-item">
                 <h3 class="work-subtitle">Мобильные приложения</h3>
               </div>
             </li>
             <li class="work-list">
-              <img src="./images/imag3.jpg" alt="подбор цветовой гаммы" />
+              <picture>
+                <source srcset="./images/imag3.jpg 1x, ./images/imag3@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img src="./images/imag3.jpg" alt="подбор цветовой гаммы" />
+              </picture>              
               <div class="work-item">
                 <h3 class="work-subtitle">Дизайнерские решения</h3>
               </div>
@@ -135,7 +147,12 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li class="item">
-              <img src="./images/team1.jpg" alt="фото Игоря Демьяненко" />
+              <picture>
+                <source srcset="./images/team1desktop.jpg 1x, ./images/team1desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/team1tablet.jpg 1x, ./images/team1tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/team1phone.jpg 1x, ./images/team1phone@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team1phone.jpg" alt="фото Игоря Демьяненко" />
+              </picture>
               <h3 class="team-subtitle">Игорь Демьяненко</h3>
               <p class="team-text">Product Designer</p>
               <ul class="social">
@@ -185,7 +202,12 @@
               </ul>
             </li>
             <li class="item">
-              <img src="./images/team2.jpg" alt="фото Ольги Репиной" />
+              <picture>
+                <source srcset="./images/team2desktop.jpg 1x, ./images/team2desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/team2tablet.jpg 1x, ./images/team2tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/team2phone.jpg 1x, ./images/team2phone@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team2phone.jpg" alt="фото Ольги Репиной" />
+              </picture>
               <h3 class="team-subtitle">Ольга Репина</h3>
               <p class="team-text">Frontend Developer</p>
               <ul class="social">
@@ -236,7 +258,12 @@
               </ul>
             </li>
             <li class="item">
-              <img src="./images/team3.jpg" alt="фото Николая Тарасова" />
+              <picture>
+                <source srcset="./images/team3desktop.jpg 1x, ./images/team3desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/team3tablet.jpg 1x, ./images/team3tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/team3phone.jpg 1x, ./images/team3phone@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team3phone.jpg" alt="фото Николая Тарасова" />
+              </picture>
               <h3 class="team-subtitle">Николай Тарасов</h3>
               <p class="team-text">Marketingr</p>
               <ul class="social">
@@ -287,7 +314,12 @@
               </ul>
             </li>
             <li class="item">
-              <img src="./images/team4.jpg" alt="фото Михаила Ермакова" />
+              <picture>
+                <source srcset="./images/team4desktop.jpg 1x, ./images/team4desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/team4tablet.jpg 1x, ./images/team4tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/team4phone.jpg 1x, ./images/team4phone@2x.jpg 2x" media="(max-width: 767px)" />
+                <img src="./images/team4phone.jpg" alt="фото Михаила Ермакова" />
+              </picture>
               <h3 class="team-subtitle">Михаил Ермаков</h3>
               <p class="team-text">UI Designer</p>
               <ul class="social">
@@ -340,7 +372,7 @@
           </ul>
         </div>
       </section>
-      <!-- Наши клиенты -->
+      <!-- Наши клиенты--> 
       <section class="clients">
         <div class="conteiner">
           <h2 class="clients-title">Постоянные клиенты</h2>
@@ -421,7 +453,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+   <footer class="footer">
       <div class="conteiner footer-conteiner">
         <div class="footer-data">
           <a href="./index.html" class="footer-logo-primary"
@@ -509,16 +541,16 @@
               name="email-footer"
               placeholder="E-mail"
             />
-            <button type="submit" class="footer-form-btn">
+            <button type="submit" class="footer-form-btn" width="200" height="50">
               Подписаться
               <svg class="footer-form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#icon-footer"></use>
               </svg>
             </button>
           </form>
-        </div>
+        </div> 
       </div>
-    </footer>
+    </footer> 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="button-close">
@@ -610,5 +642,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script> 
   </body>
 </html>

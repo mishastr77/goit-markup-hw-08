@@ -1,17 +1,16 @@
 .social {
-  display: inline-flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
 
   &-icon-item {
     fill: $iconColor;
     color: $iconColor;
   }
-  
-  
+
   &-icon-item + .social-icon-item {
     margin-left: 10px;
-   }
+  }
   &-icon-link {
     display: flex;
     justify-content: center;
@@ -24,9 +23,9 @@
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover .social-icon,
     &:focus .social-icon {
-    fill: $primaryWhiteColor;
-  }
-     
+      fill: $primaryWhiteColor;
+    }
+
     &:hover,
     &:focus {
       background-color: $primaryLinksColor;
@@ -35,5 +34,4 @@
   &-icon-link:visited {
     fill: $iconColor;
   }
-  }
-
+}

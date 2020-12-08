@@ -1,17 +1,70 @@
 .nav-main {
+  position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .nav {
   display: flex;
-  align-items: center;
+  width: 100%;
+  justify-content: space-between;
   &-site {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-align: center;
+
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 294px;
+      margin: 0;
+      padding-top: 32px;
+      
+    }
+    
+
+    
+    
+    /* display: flex;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
+    padding: 0; */
     .item {
-      display: flex;
+      display: block;
+      max-width: 450px;
+      padding-right: auto;
+      padding-left: auto;
+     margin-bottom: 40px;
+font-size: 18px;
+font-weight: 500;
+line-height: 1.1717;
+letter-spacing: 0.02em;
+text-align: left;
+
+&:last-child {
+  margin-bottom: 0;
+}
+
+
+@include for-size(tablet) {
+  display: flex;
+  margin-bottom: 0;
+
+  font-weight: 500;
+line-height: 1.1721;
+letter-spacing: 0.02em;
+text-align: left;
+
+}
+
+
+      /* display: flex;
       padding-top: 31px;
       padding-bottom: 31px;
       font-weight: 500;
@@ -19,6 +72,13 @@
       letter-spacing: 0.02em;
       & + .item {
         margin-left: 50px;
+      } */
+      &.page {
+        margin-bottom: 52px;
+
+        @include for-size(tablet) {
+          margin-bottom: 0;
+        }
       }
     }
   }

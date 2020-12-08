@@ -1,8 +1,13 @@
 .logo {
+  margin-right: 88px;
+
+  @include for-size(desctop) {
   margin-right: 93px;
+}
 
   &-primary,
   &-secondary {
+    padding: 16px 0;
     font-family: $secondaryFontFamily;
     font-size: 26px;
     font-weight: 700;

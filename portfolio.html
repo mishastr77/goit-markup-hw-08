@@ -15,40 +15,48 @@
     <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="page-header">
       <div class="conteiner nav-main">
         <nav class="nav">
           <a href="./index.html" class="logo logo-primary"
             >Web<span class="logo-secondary">Studio</span></a
           >
-          <ul class="nav-site">
-            <li class="item">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link link-main">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="header-info">
-          <li class="header-info-item">
-            <a href="mailto:info@devstudio.com" class="header-address"
-              ><svg class="header-svg" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-info-item">
-            <a href="tel:+380961111111" class="header-address"
-              ><svg class="header-svg" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <button type="button" class="menu-button is-open" aria-expanded="false"
+          aria-controls="header-menu" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./images/sprite.svg#cross"></use>
+              <use class="icon-cross" href="./images/sprite.svg#treline"></use>
+            </svg>
+          </button>
+          <div class="menu-conteiner" id="menu-conteiner" data-menu>
+            <ul class="nav-site">
+              <li class="item ">
+                <a href="./index.html" class="link">Студия</a>
+              </li>
+              <li class="item page">
+                <a href="./portfolio.html" class="link link-main">Портфолио</a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+            <ul class="header-info">
+              <li class="header-info-item">
+                <a href="mailto:info@devstudio.com" class="header-address"
+                  ><svg class="header-svg" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header-info-item">
+                <a href="tel:+380961111111" class="header-address"
+                  ><svg class="header-svg" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use></svg>
+                    +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>          
+        </nav>       
       </div>
     </header>
     <main>
@@ -58,7 +66,7 @@
           <!-- Фильтры - portfolio-filter-->
           <ul class="portfolio-button-list">
             <li class="portfolio-button-item">
-              <button style="button" class="portfolio-filter-btn">Все</button>
+              <button class="portfolio-filter-btn" style="button" >Все</button>
             </li>
             <li class="portfolio-button-item">
               <button style="button" class="portfolio-filter-btn">Веб-сайты</button>
@@ -78,10 +86,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link">
                 <div class="overlay-filter">
-                  <img
-                    src="./images/portfolio1.jpg"
-                    alt="ноут с открытым приложением"
-                  />
+                  <picture>
+                    <source srcset="./images/portf1desk.jpg 1x, ./images/portf1desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf1tabl.jpg 1x, ./images/portf1tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf1phone.jpg 1x, ./images/portf1phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf1phone.jpg" alt="ноут с открытым приложением" />
+                  </picture>
                   <p class="overlay-projects">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -95,10 +105,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link">
                 <div class="overlay-filter">
-                  <img
-                    src="./images/portfolio2.jpg"
-                    alt="два баскетболиста в прыжке"
-                  />
+                  <picture>
+                    <source srcset="./images/portf2desk.jpg 1x, ./images/portf2desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf2tabl.jpg 1x, ./images/portf2tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf2phone.jpg 1x, ./images/portf2phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf2phone.jpg" alt="два баскетболиста в прыжке" />
+                  </picture>
                   <p class="overlay-projects">
                     Многие ошибочно полагают, что я баскетболист. Когда говорю,
                     что шахматист, ошибочно полагают, что я над ними издеваюсь.
@@ -113,10 +125,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img
-                    src="./images/portfolio3.jpg"
-                    alt="емблема ресторана Seafood"
-                  />
+                  <picture>
+                    <source srcset="./images/portf3desk.jpg 1x, ./images/portf3desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf3tabl.jpg 1x, ./images/portf3tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf3phone.jpg 1x, ./images/portf3phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf3phone.jpg" alt="емблема ресторана Seafood" />
+                  </picture>                 
                   <p class="overlay-projects">Ешь. Пей. Молись.</p>
                 </div>
                 <h2 class="projects-subtitle">Ресторан Seafood</h2>
@@ -126,7 +140,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img src="./images/portfolio4.jpg" alt="наушники" />
+                  <picture>
+                    <source srcset="./images/portf4desk.jpg 1x, ./images/portf4desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf4tabl.jpg 1x, ./images/portf4tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf4phone.jpg 1x, ./images/portf4phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf4phone.jpg" alt="наушники" />
+                  </picture>
                   <p class="overlay-projects">
                     Слушайте только правильную музыку!!!
                   </p>
@@ -138,7 +157,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img src="./images/portfolio5.jpg" alt="две коробки" />
+                  <picture>
+                    <source srcset="./images/portf5desk.jpg 1x, ./images/portf5desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf5tabl.jpg 1x, ./images/portf5tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf5phone.jpg 1x, ./images/portf5phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf5phone.jpg" alt="две коробки" />
+                  </picture>                  
                   <p class="overlay-projects">Подарков много не бывает )</p>
                 </div>
                 <h2 class="projects-subtitle">Проект Boxes</h2>
@@ -148,10 +172,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img
-                    src="./images/portfolio6.jpg"
-                    alt="веб-сайт с изображением карты мира"
-                  />
+                  <picture>
+                    <source srcset="./images/portf6desk.jpg 1x, ./images/portf6desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf6tabl.jpg 1x, ./images/portf6tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf6phone.jpg 1x, ./images/portf6phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf6phone.jpg" alt="веб-сайт с изображением карты мира" />
+                  </picture>                  
                   <p class="overlay-projects">Мир без границ ето класно !</p>
                 </div>
                 <h2 class="projects-subtitle">Inspiration has no Borders</h2>
@@ -161,7 +187,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img src="./images/portfolio7.jpg" alt="развернутая книга" />
+                  <picture>
+                    <source srcset="./images/portf7desk.jpg 1x, ./images/portf7desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf7tabl.jpg 1x, ./images/portf7tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf7phone.jpg 1x, ./images/portf7phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf7phone.jpg" alt="развернутая книга" />
+                  </picture>                  
                   <p class="overlay-projects">
                     Чтение и учение свет, а неучение чуть свет и на работу.
                   </p>
@@ -173,10 +204,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img
-                    src="./images/portfolio8.jpg"
-                    alt="бирка с надписью Lab el tag"
-                  />
+                  <picture>
+                    <source srcset="./images/portf8desk.jpg 1x, ./images/portf8desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf8tabl.jpg 1x, ./images/portf8tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf8phone.jpg 1x, ./images/portf8phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf8phone.jpg" alt="бирка с надписью Lab el tag" />
+                  </picture>                  
                   <p class="overlay-projects">Красиво жить не запретишь</p>
                 </div>
                 <h2 class="projects-subtitle">Проект LAB</h2>
@@ -186,10 +219,12 @@
             <li class="portfolio-filter-item">
               <a href="" class="portfolio-filter-link"
                 ><div class="overlay-filter">
-                  <img
-                    src="./images/portfolio9.jpg"
-                    alt="человек работающий за ноутбуком"
-                  />
+                  <picture>
+                    <source srcset="./images/portf9desk.jpg 1x, ./images/portf9desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portf9tabl.jpg 1x, ./images/portf9tabl@2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portf9phone.jpg 1x, ./images/portf9phone@2x.jpg 2x" media="(max-width: 767px)" />
+                    <img src="./images/portf9phone.jpg" alt="человек работающий за ноутбуком" />
+                  </picture>                  
                   <p class="overlay-projects">
                     Работать из дому что может быть лудьше во время пандемии
                   </p>
@@ -289,5 +324,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

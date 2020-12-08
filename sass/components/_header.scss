@@ -1,40 +1,116 @@
-.header {
-    background-color: $primaryWhiteColor;
-  
-  &-info {
+.page-header {
+  position: relative;
+  background-color: $primaryWhiteColor;
+  }
+
+.header-info {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include for-size(tablet) {
     display: flex;
+    flex-direction: column;
+    padding: 21px 0;
+font-size: 12px;
+font-weight: 500;
+line-height: 1.1717;
+letter-spacing: 0.02em;
+text-align: left;
+
+  }
+
+  /* display: flex;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
+    padding: 0; */
   }
-  
-  &-address {
-    display: flex;
-    padding-top: 31px;
-    padding-bottom: 31px;
+
+  .header-address {
     color: $primaryTextColor;
     font-weight: 500;
     line-height: 1.1429;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  &:hover,
-  &:focus {
-    color: $primaryLinksColor;
+
+    /* display: flex;
+    padding-top: 31px;
+    padding-bottom: 31px; */
+
+    &:hover,
+    &:focus {
+      color: $primaryLinksColor;
+    }
   }
-}
-  &-svg {
+
+
+ .header-svg {
     display: inline-block;
     fill: $primaryTextColor;
     margin-right: 10px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  } 
+
+.menu-button {
+  display: inline-flex;
+  margin: 10px 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
   }
 }
-  .header-info .header-info-item + .header-info-item {
-    margin-left: 30px;
+
+.menu-conteiner {
+  background-color: $primaryWhiteColor;
+  padding: 60px 20px 60px 20px;
+  text-align: center;
+  font-size: 20px;
+  z-index: 50;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+        &.is-open {
+      display: block;
+    }  
   }
-  .header-address:hover .header-svg,
-  .header-address:focus .header-svg {
-    fill: $primaryLinksColor;
+
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 0 0 0;
   }
+}
+.header-info-item {
+  margin-bottom: 16px;
+
+  @include for-size(tablet) {}
+    
+}
+/* .header-info .header-info-item + .header-info-item {
+  margin-left: 30px;
+} */
+.header-address:hover .header-svg,
+.header-address:focus .header-svg {
+  fill: $primaryLinksColor;
+}

@@ -1,36 +1,55 @@
 .advan {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $primaryWhiteColor;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &-subtitle {
+    font-weight: 700;
+    width: 100%;
+    line-height: 1.1721;
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 0;
     color: $titleTextColor;
-    font-weight: 700;
-    line-height: 1.143;
     text-transform: uppercase;
   }
   &-text {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
-    width: 270px;
-    height: 75px;
+    width: 100%;
     color: $primaryTextColor;
-    line-height: 1.46;
+    line-height: 1.7143;
   }
 }
 .advantages {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   margin: 0;
   padding: 0;
 
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    padding: 0;
+  }
+
   .item {
-    width: calc((100% - 90px) / 4);
-    margin: 0;
-    & + .item {
+    width: 100%;
+
+    @include for-size(tablet) {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+    }
+
+    @include for-size(desktop) {
+      width: calc(100% / 4 - 30px);
       margin-left: 30px;
     }
   }

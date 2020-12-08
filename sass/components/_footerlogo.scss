@@ -1,4 +1,5 @@
 .footer-logo-primary {
+  display: inline-block;
     margin-bottom: 20px;
     color: $primaryLinksColor;
     font-family: $secondaryFontFamily;
@@ -7,6 +8,7 @@
     line-height: 1.193;
   }
   .footer-logo-secondary {
+    display: inline-block;
     color: $primaryWhiteColor;
     font-family: $secondaryFontFamily;
     font-size: 26px;
