@@ -1,6 +1,6 @@
 .hero {
-  display: flex;
-  width: 480px;
+   display: flex;
+  width: 100%;
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -10,8 +10,9 @@
     url(../images/herophone.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left bottom;
-
+  background-position: 50% 50%;
+  transform: translate(-50% -50%);
+  
   @media screen and (min-device-pixel-ratio: 2),
     screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (-o-min-device-pixel-ratio: 2/1),
@@ -21,13 +22,20 @@
       url(../images/herophone@2x.jpg);
   }
 
+  @include for-size(mobile) {
+    width: 480px;
+    margin-left: auto;
+  margin-right: auto;
+  }
+
   @include for-size(tablet) {
     width: 768px;
     background-image: linear-gradient(#2f303a40, #2f303a40),
       url(../images/herotablet.jpg);
       background-repeat: no-repeat;
   background-size: cover;
-  background-position: left bottom;
+  background-position: 50% 50%;
+  transform: translate(-50% -50%);
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (-webkit-min-device-pixel-ratio: 2),
@@ -44,13 +52,13 @@
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-left: -200px;
     background-color: $primaryBackgroundColor;
     background-image: linear-gradient(#2f303a40, #2f303a40),
       url(../images/herodesk.jpg);
       background-repeat: no-repeat;
   background-size: cover;
-  background-position: left bottom;
+  background-position: 50% 50%;
+  transform: translate(-50% -50%);
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (-webkit-min-device-pixel-ratio: 2),
@@ -99,5 +107,5 @@
       color: $primaryLinksColor;
       background-color: $primaryWhiteColor;
     }
-  }
+  } 
 }

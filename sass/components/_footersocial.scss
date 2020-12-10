@@ -11,13 +11,12 @@
     padding-top: 12px;
   }
 
-  @include for-size(dasktop) {
+  @include for-size(desktop) {
     display: flex;
     flex-direction: column;
     width: 206px;
     height: 80px;
     margin-left: 70px;
-    margin-top: 12px;
     margin-bottom: 40px;
   }
     
