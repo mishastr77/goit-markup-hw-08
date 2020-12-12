@@ -18,6 +18,10 @@
     padding: 0;
     color: $titleTextColor;
     text-transform: uppercase;
+
+    @include for-size(tablet) {
+      text-align: left;
+    }
   }
   &-text {
     margin-top: 0;

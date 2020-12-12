@@ -410,11 +410,19 @@ body.modal-open {
 
 .modal {
   margin-top: 93px;
+  position: absolute;
+  width: calc(100% - 30px);
+  border-radius: 4px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 480px) {
   .modal {
+    margin-top: 93px;
     position: absolute;
     height: 609px;
     width: 450px;
@@ -560,7 +568,7 @@ body.modal-open {
 .form-button {
   width: 200px;
   height: 50px;
-  margin-left: 85px;
+  margin-left: calc((100% - 200px) / 2);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.875;
@@ -572,12 +580,6 @@ body.modal-open {
   border-radius: 4px;
   border-color: transparent;
   transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 1200px) {
-  .form-button {
-    margin-left: 124px;
-  }
 }
 
 .form-button:hover, .form-button:focus {
@@ -1206,6 +1208,12 @@ body.modal-open {
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .advan-subtitle {
+    text-align: left;
+  }
+}
+
 .advan-text {
   margin-top: 0;
   margin-bottom: 0;
@@ -1513,6 +1521,8 @@ body.modal-open {
   margin-left: 30px;
   margin-bottom: 30px;
   height: 90px;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1533,8 +1543,6 @@ body.modal-open {
 
 .clients-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #ffffff;
 }
 
@@ -1558,37 +1566,49 @@ body.modal-open {
 }
 
 .client1 {
-  margin: 19px 62px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  margin-left: calc((100% - 44px) / 2);
   width: 44px;
   height: 48px;
 }
 
 .client2 {
-  margin: 18px 64px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: calc((100% - 40px) / 2);
   width: 40px;
   height: 51px;
 }
 
 .client3 {
-  margin: 23px 63px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  margin-left: calc((100% - 42px) / 2);
   width: 42px;
   height: 41px;
 }
 
 .client4 {
-  margin: 23px 44px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  margin-left: calc((100% - 80px) / 2);
   width: 80px;
   height: 41px;
 }
 
 .client5 {
-  margin: 20px 55px;
-  width: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc((100% - 60px) / 2);
   height: 47px;
+  width: 60px;
 }
 
 .client6 {
-  margin: 21px 40px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  margin-left: calc((100% - 88px) / 2);
   width: 88px;
   height: 45px;
 }

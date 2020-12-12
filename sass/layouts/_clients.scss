@@ -31,6 +31,8 @@
     margin-left: 30px;
     margin-bottom: 30px;
     height: 90px;
+    justify-content: center;
+    align-items: center;
     border: 1px solid $iconColor;
     box-sizing: border-box;
     border-radius: 4px;
@@ -47,8 +49,6 @@ width: calc(100% / 3 - 30px);
 
   &-link {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $primaryWhiteColor;
     &:hover .clients-svg,
     &:focus .clients-svg {
@@ -70,32 +70,44 @@ width: calc(100% / 3 - 30px);
   }
 }
 .client1 {
-  margin: 19px 62px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  margin-left: calc((100% - 44px) / 2);
   width: 44px;
   height: 48px;
-}
+ }
 .client2 {
-  margin: 18px 64px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: calc((100% - 40px) / 2);
   width: 40px;
   height: 51px;
 }
 .client3 {
-  margin: 23px 63px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  margin-left: calc((100% - 42px) / 2);
   width: 42px;
-  height: 41px;
+  height: 41px; 
 }
 .client4 {
-  margin: 23px 44px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  margin-left: calc((100% - 80px) / 2);
   width: 80px;
-  height: 41px;
+  height: 41px; 
 }
 .client5 {
-  margin: 20px 55px;
-  width: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc((100% - 60px) / 2);
   height: 47px;
+  width: 60px;
 }
 .client6 {
-  margin: 21px 40px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  margin-left: calc((100% - 88px) / 2);
   width: 88px;
   height: 45px;
 }
